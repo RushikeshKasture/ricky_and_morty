@@ -3,7 +3,6 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchCharacterById } from "../api/Api";
 
 export default function CharacterDetail() {
-  // ✅ Get route params (v1 router uses $id instead of :id)
   const { id } = useParams({ from: "/character/$id" });
   const charId = Number(id);
 
