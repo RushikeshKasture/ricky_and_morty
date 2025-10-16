@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const API_BASE = "https://rickandmortyapi.com/api";
+export const API_BASE = import.meta.env.VITE_API_URL;
 
 export type Character = {
   id: number;
