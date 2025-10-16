@@ -28,6 +28,7 @@ export default function CharacterList() {
       <header className="flex items-center justify-between mb-4">
         <h1 className="text-2xl font-bold">Rick & Morty — Characters</h1>
         <div className="flex gap-2 items-center">
+          {isFetching && <span className="text-sm italic">Updating…</span>}
           <button
             onClick={() => refetch()}
             className="px-3 py-1 border rounded shadow-sm bg-white"
@@ -35,7 +36,6 @@ export default function CharacterList() {
           >
             Refresh
           </button>
-          {isFetching && <span className="text-sm italic">Updating…</span>}
         </div>
       </header>
 
